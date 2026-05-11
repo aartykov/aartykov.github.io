@@ -53,8 +53,66 @@
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
-	
-    <tr>
+	<tr>
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <div class="one">
+      <!-- Video element with poster -->
+      <video 
+          id="bolt3d_video" 
+          width="160" 
+          muted 
+          loop 
+          playsinline
+          poster="images/first_frame.png" 
+          style="display:block; cursor:pointer;"
+      >
+        <source src="images/box.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <script type="text/javascript">
+      const video = document.getElementById('bolt3d_video');
+
+      // Play video on hover
+      video.addEventListener('mouseenter', () => {
+        video.play();
+      });
+
+      // Pause and reset video when mouse leaves
+      video.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    </script>
+  </td>
+
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://aartykov.github.io/Articulation-in-Prime/">
+      <span class="papertitle">sim2art: Accurate Articulated Object Modeling from a Single Video using Synthetic Training Data Only</span>
+    </a>
+    <br>
+    <strong>Arslan Artykov</strong>,
+    <a href="">Tom Ravaud</a>,
+    <a href="https://nviolante25.github.io/">Nicolás Violante Grezzi</a>,
+    <a href="https://vincentlepetit.github.io/">Vincent Lepetit</a>
+    <br>
+    <em>arxiv</em> &nbsp 
+    <br>
+    <a href="https://aartykov.github.io/Articulation-in-Prime/">project page</a>
+    /
+    <a href=" ">arXiv</a>
+    <p></p>
+    <p>
+      We propose a category-agnostic optimization framework that treats articulated object understanding as a primitive-fitting problem. Geometric primitives serve as a proxy representation that avoids the pitfalls of unstable point tracks; a novel mechanism organizes them into coherent parts constrained by revolute and prismatic joints.
+    </p>
+  </td>
+</tr>
+  
+  
+  
+  
+  <tr>
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <!-- Video element with poster -->
@@ -94,6 +152,7 @@
     </a>
     <br>
     <strong>Arslan Artykov</strong>,
+    <a href=" ">Tom Ravaud</a>,
     <a href="https://csautier.github.io/">Corentin Sautier</a>,
     <a href="https://vincentlepetit.github.io/">Vincent Lepetit</a>
     <br>

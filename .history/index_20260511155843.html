@@ -53,8 +53,66 @@
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
-	
-    <tr>
+	<tr>
+  <td style="padding:16px;width:20%;vertical-align:middle">
+    <div class="one">
+      <!-- Video element with poster -->
+      <video 
+          id="bolt3d_video" 
+          width="160" 
+          muted 
+          loop 
+          playsinline
+          poster="images/first_frame.png" 
+          style="display:block; cursor:pointer;"
+      >
+        <source src="images/box.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <script type="text/javascript">
+      const video = document.getElementById('bolt3d_video');
+
+      // Play video on hover
+      video.addEventListener('mouseenter', () => {
+        video.play();
+      });
+
+      // Pause and reset video when mouse leaves
+      video.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+      });
+    </script>
+  </td>
+
+  <td style="padding:8px;width:80%;vertical-align:middle">
+    <a href="https://aartykov.github.io/Articulation-in-Prime/">
+      <span class="papertitle">sim2art: Accurate Articulated Object Modeling from a Single Video using Synthetic Training Data Only</span>
+    </a>
+    <br>
+    <strong>Arslan Artykov</strong>,
+    <a href="">Tom Ravaud</a>,
+    <a href="https://nviolante25.github.io/">Nicolás Violante Grezzi</a>,
+    <a href="https://vincentlepetit.github.io/">Vincent Lepetit</a>
+    <br>
+    <em>arxiv</em> &nbsp 
+    <br>
+    <a href="https://aartykov.github.io/Articulation-in-Prime/">project page</a>
+    /
+    <a href=" ">arXiv</a>
+    <p></p>
+    <p>
+      We propose a category-agnostic optimization framework that treats articulated object understanding as a primitive-fitting problem. Geometric primitives serve as a proxy representation that avoids the pitfalls of unstable point tracks; a novel mechanism organizes them into coherent parts constrained by revolute and prismatic joints.
+    </p>
+  </td>
+</tr>
+  
+  
+  
+  
+  <tr>
   <td style="padding:16px;width:20%;vertical-align:middle">
     <div class="one">
       <!-- Video element with poster -->
@@ -94,6 +152,7 @@
     </a>
     <br>
     <strong>Arslan Artykov</strong>,
+    <a href=" ">Tom Ravaud</a>,
     <a href="https://csautier.github.io/">Corentin Sautier</a>,
     <a href="https://vincentlepetit.github.io/">Vincent Lepetit</a>
     <br>
@@ -144,13 +203,59 @@
         <br>
         <a href="https://aartykov.github.io/Articulated-Object-Understanding-from-Single-Video-Sequence/">project page</a>
         /
-        <a href=" ">arXiv</a>
+        <a href="https://openaccess.thecvf.com/content/ICCV2025W/gDT-IV/papers/Artykov_Articulated_Object_Understanding_from_a_Single_Video_Sequence_ICCVW_2025_paper.pdf">paper</a>
         <p></p>
         <p>
 				We introduce a novel method for estimating the structure and joint parameters of articulated objects from a single casual video, captured by a potentially moving camera.
         </p>
       </td>
     </tr>
+
+
+     <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+      <td style="padding:16px;width:20%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='ever_image'>
+					  <img src='images/pytorchgeonodes.png' width=100%>
+					</div>
+          <img src='images/pytorchgeonodes.png' width=100%>
+        </div>
+        <script type="text/javascript">
+          function ever_start() {
+            document.getElementById('ever_image').style.opacity = "1";
+          }
+
+          function ever_stop() {
+            document.getElementById('ever_image').style.opacity = "0";
+          }
+          ever_stop()
+        </script>
+      </td>
+      <td style="padding:8px;width:80%;vertical-align:middle">
+        <a href="https://vevenom.github.io/pytorchgeonodes/">
+			<span class="papertitle">PyTorchGeoNodes: Enabling Differentiable Shape Programs for 3D Shape Reconstruction
+</span>
+        </a>
+        <br>
+        <a href="https://vevenom.github.io/">Sinisa Stekovic</a>,
+				<strong>Arslan Artykov</strong>,
+        <a href="https://scholar.google.at/citations?user=VWNkvIwAAAAJ&hl=en&oi=ao">Stefan Ainetter</a>,
+        <a href=" ">Mattia D'Urso</a>
+        <a href=" ">Friedrich Fraundorfer</a>
+				<br>
+        <em>CVPR</em>, 2025 &nbsp 
+        <br>
+        <a href="https://vevenom.github.io/pytorchgeonodes/">project page</a>
+        /
+        <a href="https://arxiv.org/abs/2404.10620">arXiv</a>
+        <p></p>
+        <p>
+				PyTorchGeoNodes is a differentiable module that enables reconstruction of 3D objects and their semantic parameters using interpretable shape programs.
+        </p>
+      </td>
+    </tr>
+
+
 
 
 
