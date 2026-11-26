@@ -170,7 +170,6 @@ em {
 .paper-row {
   display: grid;
   grid-template-columns: 292px minmax(0, 1fr);
-  grid-template-rows: auto auto;
   align-items: start;
   border-bottom: 1px solid #e7e5e4;
   padding: 22px 0;
@@ -182,14 +181,20 @@ em {
   vertical-align: top !important;
 }
 
-.paper-row > td:first-child,
+.paper-row > td:first-child {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 .paper-row .thumb {
-  display: contents;
+  display: block;
+  width: 260px;
+  margin: 0 16px;
 }
 
 .paper-row > td:nth-child(2) {
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 1;
   width: auto !important;
   max-width: none !important;
   padding: 0 8px !important;
@@ -205,7 +210,7 @@ em {
 }
 
 .thumb {
-  display: inline-block;
+  display: block;
   width: 260px;
 }
 
@@ -216,10 +221,8 @@ em {
 
 .one {
   position: relative;
-  grid-column: 1;
-  grid-row: 2;
   width: 260px;
-  margin: 6px 16px 0;
+  margin: 0;
   border-radius: 8px;
   overflow: hidden;
   background: #fff;
@@ -248,10 +251,8 @@ em {
 .venue-badge {
   display: block;
   box-sizing: border-box;
-  grid-column: 1;
-  grid-row: 1;
-  width: 260px;
-  margin: 0 16px 6px;
+  width: 100%;
+  margin: 0 0 6px;
   padding: 4px 8px;
   border-radius: 4px;
   color: #fff;
